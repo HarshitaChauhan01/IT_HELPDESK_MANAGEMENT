@@ -399,7 +399,8 @@ columns = (
 ticket_table = ttk.Treeview(
     table_frame,
     columns=columns,
-    show="headings"
+    show="headings",
+    height=3
 )
 
 column_settings = {
