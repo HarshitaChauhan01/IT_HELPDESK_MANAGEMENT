@@ -216,8 +216,8 @@ def clear_selection():
 
 root = tk.Tk()
 root.title("Update Ticket Status | IT Help Desk")
-root.geometry("1200x750")
-root.minsize(950, 600)
+root.geometry("1200x800")
+root.minsize(1000, 700)
 root.configure(bg=BG)
 
 
@@ -312,7 +312,8 @@ table_card = tk.Frame(
     highlightthickness=1
 )
 
-table_card.pack(fill="both", expand=True)
+# Prevent the table card from expanding vertically
+table_card.pack(fill="x", expand=False)
 
 tk.Label(
     table_card,
@@ -375,7 +376,8 @@ columns = (
 ticket_table = ttk.Treeview(
     table_frame,
     columns=columns,
-    show="headings"
+    show="headings",
+    height=4
 )
 
 column_settings = {
